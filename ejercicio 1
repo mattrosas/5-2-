@@ -1,0 +1,169 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char *argv[]){
+int p;
+printf("elije alguno de los 4 casos: ");
+scanf("%d", &p);
+printf("\n");
+/*
+el switch sirve para elegir el ejercicio que quieras
+*/
+switch(p){
+    case 1:
+    /*
+en el caso uno la computadora va a revisar
+si el numero que ingresas es positivo, negativo o 0
+*/
+         int n;
+         printf("inserta un numero: ");
+         /*
+se ingresa el numero que quiero revisar
+*/
+         scanf("%d", &n);
+         printf("\n");
+         if(n > 0){
+             printf("el numero es positivo\n");
+             /*
+el mensaje aparece si el numero es positivo
+*/
+         }
+         else if(n < 0){
+             printf("el numero es negativo\n");
+             /*
+el mensaje aparece si el numero es negativo
+*/
+         }
+         else if(n == 0){
+             printf("el numero es 0\n");
+             /*
+el mensaje aparece si el numero es 0
+*/
+         }
+         break;
+    case 2:
+     /*
+en el caso uno la computadora va a revisar
+si el numero que ingresas es par o impar
+*/
+         printf("inserta un numero: ");
+         scanf("%d", &n);
+           /*
+se ingresa el numero que quiero revisar
+*/
+         printf("\n");
+         if(n % 2 == 0){
+             printf("el numero es par\n");
+             /*
+el mensaje aparece si el numero es par
+*/
+         }
+         else if(n % 2 != 0){
+             printf("el numero es impar\n");
+             /*
+el mensaje aparece si el numero es impar
+*/
+         }
+         break;
+    case 3:
+    /*
+en el caso uno la computadora va a revisar
+si el numero que ingresas es multiplo de 2 o de 3
+*/
+         printf("inserta un numero: ");
+         scanf("%d", &n);
+           /*
+se ingresa el numero que quiero revisar
+*/
+         printf("\n");
+          if(n % 2 == 0){
+              if(n % 3 == 0){
+                  printf("el numero es multiplo de 2 y 3\n");
+                  /*
+el mensaje aparece si el numero es multiplo de 2 y de 3
+*/
+              }
+              else if(n % 3 != 0){
+                  printf("el numero es multiplo de 2\n");
+                  /*
+el mensaje aparece si el numero es multiplo de 2
+*/
+              }
+          }
+          else if(n % 2 != 0){
+              if(n % 3 == 0){
+                  printf("el numero es multiplo de 3\n");
+                  /*
+el mensaje aparece si el numero es multiplo de 3
+*/
+              }
+              else if(n % 3 != 0){
+                  printf("el numero no es multiplo de ninguno\n");
+                  /*
+el mensaje aparece si el numero no es multiplo de ninguno
+*/
+              }
+          }
+          break;
+    case 4:
+    /*
+en el caso uno la computadora va a revisar
+cual de los numeros que ingresaste es el mayor
+*/
+         int a;
+         int b;
+         int c;
+          printf("inserta un numero: ");
+         scanf("%d", &a);                        //se ingresan los numeros
+         printf("\n");
+          printf("inserta otro numero: ");
+         scanf("%d", &b);                        //se ingresan los numeros
+         printf("\n");
+          printf("inserta otro numero: ");
+         scanf("%d", &c);                        //se ingresan los numeros
+         printf("\n");
+           if(a > b){
+            if(a > c){
+                printf("a es el mayor");//el mensaje aparece si a es el mayor
+            }
+            else if(a <= c){
+                if(a == c){
+                    printf("a y c son los mayores");//el mensaje aparece si a y c son los mayores
+                }
+                else if(a != c){
+                    printf("c es el mayor");//el mensaje aparece si c es el mayor
+                }
+            }
+           }
+           else if(a <= b){
+            if(a == b){
+                if(a > c){
+                    printf("a y b son los mayores");//el mensaje aparece si a y b son los mayores
+                }
+                else if(a <= c){
+                    if(a == c){
+                        printf("los tres son iguales");//el mensaje aparece si los tres son iguales
+                    }
+                    else if(a != c){
+                        printf("c es el mayor");//el mensaje aparece si c es el mayor
+                    }
+                }
+            }
+            else if(a != b){
+                if(b > c){
+                    printf("b es el mayor");//el mensaje aparece si b es el mayor
+                }
+                else if(b <= c){
+                    if(b == c){
+                    printf("los tres son iguales");//el mensaje aparece si los tres son iguales
+                    }
+                    else if(b != c){
+                        printf("c es el mayor");//el mensaje aparece si c es el mayor
+                    }
+                }
+            }
+           }
+           break;
+}
+}
