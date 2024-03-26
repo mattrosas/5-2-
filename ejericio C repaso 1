@@ -1,22 +1,29 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-int main(int argc, char *argv[]){
+/*
+la computadora recibe la cantiad de alumnos que van a ir al
+viaje de estudios y con la cantidad de alumnos calcula
+cuanto tienen que pagar por alumno y el precio total
+*/
+int main(){
         int a;
+        int t;
           printf("inserta el numero de alumnos numero: ");
          scanf("%d", &a);                        //se ingresa el numero de alumnos
          printf("\n");
          if(a >= 100){
-            printf("el costo de cada alumno es de $500");
+            t = 500  * a;
+            printf("el costo de cada alumno es de $500, y en total tienen que pagar %d", t);
          }
          else if(50 <= a && a <= 99){
-            printf("el costo de cada alumno es de $400");
+            t = 400  * a;
+            printf("el costo de cada alumno es de $400, y en total tienen que pagar %d", t);
          }
          else if(30 <= a && a <= 49){
-            printf("el costo de cada alumno es de $300");
+            t = 300  * a;
+            printf("el costo de cada alumno es de $300, y en total tienen que pagar %d", t);
          }
          else if(a <= 29){
             printf("se debera pagar $6000 por el micro");
          }
 }
+
