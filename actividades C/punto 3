@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(){
+    int p1;
+    int p2;
+    int p3;
+    int ef;
+    int tf;
+    printf("inserta la calificacion 1: ");
+         scanf("%d", &p1);
+         printf("\n");
+    printf("inserta la calificacion 2: ");
+         scanf("%d", &p2);
+         printf("\n");
+    printf("inserta la calificacion 3: ");
+         scanf("%d", &p3);
+         printf("\n");
+    printf("inserta la calificacion del examen final: ");
+         scanf("%d", &ef);
+         printf("\n");
+    printf("inserta la calificacion del trabajo final: ");
+         scanf("%d", &tf);
+         printf("\n");
+    int cp = (p1 + p2 + p3) / 3;
+    int cf = 0.55 * cp + 0.30 * ef + 0.15 * tf;
+    printf("tu calificacion final es %d", cf);
+    printf("\n");
+}
