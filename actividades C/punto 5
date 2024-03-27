@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(){
+    int a = 70;
+    int b = 150;
+
+    printf("Una persona se encuentra en el kilómetro 70 de una carretera, otra se encuentra en el km 150, los coches tienen sentido opuesto y tienen la misma velocidad\n¿en que kilometro se encontraran?");
+         printf("\n");
+    int i = (b - a) / 2 + 70;
+    printf("se encontraran en el kilometro %d", i);
+         printf("\n");
+}
