@@ -1,0 +1,146 @@
+#include <stdio.h>
+
+int main(){
+int p;
+printf("elije alguno de los 5 casos: ");
+scanf("%d", &p);
+printf("\n");
+/*
+el switch sirve para elegir el ejercicio que quieras
+*/
+switch(p){
+      case 1:
+      /*El director de una escuela está organizando un viaje de estudios,
+       y requiere determinar cuánto debe cobrar a cada alumno y cuánto debe pagar a la compañía de viajes por el servicio.
+       La forma de cobrar es la siguiente: 
+       Si son 100 alumnos o más, el costo por cada alumno es de $ 500, de 50 a 99 alumnos, 
+       el costo es de $ 400  y  de 30 a 49, de $ 300. Pero si son menos de 30,
+        el costo del alquiler del micro es de $ 6000.- sin importar el número de alumnos. 
+*/
+
+/*elprograma va a calcular la cantidad de alumnos para saber cuanto tendran que pagar el micro
+*/
+        int a;
+        int t;
+          printf("inserta el numero de alumnos numero: ");
+         scanf("%d", &a);                        
+         printf("\n");
+         if(a >= 100){
+            t = 500  * a;
+            printf("el costo de cada alumno es de $500, y en total tienen que pagar %d", t);
+         }
+         else if(50 <= a && a <= 99){
+            t = 400  * a;
+            printf("el costo de cada alumno es de $400, y en total tienen que pagar %d", t);
+         }
+         else if(30 <= a && a <= 49){
+            t = 300  * a;
+            printf("el costo de cada alumno es de $300, y en total tienen que pagar %d", t);
+         }
+         else if(a <= 29){
+            printf("se debera pagar $6000 por el micro");
+         }
+         break;
+       case 2:
+       /*Un vendedor recibe un sueldo base más un 10% extra por comisión de sus ventas,
+         el vendedor desea saber cuánto dinero obtendrá por concepto de comisiones por las tres ventas que realiza en el mes
+         y el total que recibirá en el mes tomando en cuenta su sueldo base y comisiones
+       */
+    int v1;
+    int v2;
+    int v3;
+    int sb;
+    printf("inserta la venta 1: ");
+         scanf("%d", &v1);
+         printf("\n");
+    printf("inserta la venta 2: ");
+         scanf("%d", &v2);
+         printf("\n");
+    printf("inserta la venta 3: ");
+         scanf("%d", &v3);
+         printf("\n");
+    printf("inserta el sueldo base: ");
+         scanf("%d", &sb);
+         printf("\n");
+    float c1 = v1 * 0.10;
+    float c2 = v2 * 0.10;
+    float c3 = v3 * 0.10;
+    printf("obtendra $%f de comision en la primera venta", c1);
+         printf("\n");
+         printf("obtendra $%f de comision en la segunda venta", c2);
+         printf("\n");
+         printf("obtendra $%f de comision en la tercera venta", c3);
+         printf("\n");
+    float totalc =c1 + c2 + c3;
+    printf("obtendra $%f de comisiones en total", totalc);
+         printf("\n");
+    float total = totalc + sb;
+    printf("el total que recibira en el mes es de $%f", total);
+         printf("\n");
+         break;
+       case 3:
+/*Un alumno desea saber cuál será su calificación final en la materia de Algoritmos.
+ Dicha calificación se compone de los siguientes porcentajes:
+55% del promedio de sus tres calificaciones parciales.
+30% de la calificación del examen final.
+15% de la calificación de un trabajo final.
+*/
+    int p1;
+    int p2;
+    int p3;
+    int ef;
+    int tf;
+    printf("inserta la calificacion 1: ");
+         scanf("%d", &p1);
+         printf("\n");
+    printf("inserta la calificacion 2: ");
+         scanf("%d", &p2);
+         printf("\n");
+    printf("inserta la calificacion 3: ");
+         scanf("%d", &p3);
+         printf("\n");
+    printf("inserta la calificacion del examen final: ");
+         scanf("%d", &ef);
+         printf("\n");
+    printf("inserta la calificacion del trabajo final: ");
+         scanf("%d", &tf);
+         printf("\n");
+    int cp = (p1 + p2 + p3) / 3;
+    int cf = 0.55 * cp + 0.30 * ef + 0.15 * tf;
+    printf("tu calificacion final es %d", cf);
+    printf("\n");
+    break;
+       case 4:
+       /*el programa imprime todos los numeros pares
+       que hay dentro de dos numeros
+       */
+    int d;
+    int f;
+    int g;
+
+    printf("inserta un numero: ");
+         scanf("%d", &d);
+         printf("\n");
+    printf("inserta el otro numero: ");
+         scanf("%d", &f);
+         printf("\n");
+    
+    for(g=d; g < f; g++){
+        if(g % 2 == 0){
+            printf("%d", g);
+         printf("\n");
+        }
+    }
+    break;
+       case 5:
+    int n = 70;
+    int m = 150;
+
+    printf("Una persona se encuentra en el kilómetro 70 de una carretera, otra se encuentra en el km 150, los coches tienen sentido opuesto y tienen la misma velocidad\n¿en que kilometro se encontraran?");
+         printf("\n");
+    int i = (m - n) / 2 + 70;
+    printf("se encontraran en el kilometro %d", i);
+         printf("\n");
+         break;
+}
+}
