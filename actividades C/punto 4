@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){
+    int a;
+    int b;
+    int i;
+
+    printf("inserta un numero: ");
+         scanf("%d", &a);
+         printf("\n");
+    printf("inserta el otro numero: ");
+         scanf("%d", &b);
+         printf("\n");
+    
+    for(i=a; i < b; i++){
+        if(i % 2 == 0){
+            printf("%d", i);
+         printf("\n");
+        }
+    }
+}
