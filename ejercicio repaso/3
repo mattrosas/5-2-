@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a = 0;
+    
+    printf("escribe un numero: ");
+      scanf("%d", &a);                        
+         printf("\n");
+    
+    if(a > 0){
+        if(a %2 == 0){
+            printf("el numero es par");
+        }
+        else if(a %2 != 0){
+            printf("el numero es impar");
+        }
+    }
+        else if(a < 0){
+            printf("el numero es negativo");
+        }
+        else if(a == 0){
+            printf("el numero es 0");
+        }
+}
