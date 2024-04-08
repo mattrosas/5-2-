@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a = 0;
+    
+    printf("escribe la nota de tu primera prueba: ");
+      scanf("%d", &a);                        
+         printf("\n");
+
+    if(a >= 6){
+        if(a >= 8){
+             printf("felicidades");
+        }
+        else if(a >= 6 && a < 8){
+            printf("aprobado");
+        }
+    }
+    else if(a < 6){
+        if(a == 1){
+             printf("debes esforzarte mas");
+        }
+        else if(a > 1 && a < 6){
+            printf("desaprobado");
+        }
+    }
+}
