@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int hh = 0;
+    int mm = 0;
+
+    printf("escribe la hora: ");
+      scanf("%d", &hh);                        
+         printf("\n");
+    printf("escribe los minutos: ");
+      scanf("%d", &mm);                        
+         printf("\n");
+    
+    if(hh <= 12 && hh < 24){
+        if(mm >= 0 && mm <= 59){
+            printf("la hora es: %d:%d", hh, mm);
+        }
+        else if(mm >= 60){
+            printf("la hora no tiene mas de 59 minutos");
+        }
+        else if(mm < 0){
+            printf("no pueden haber minutos negativos");
+        }
+    }
+        else if(hh > 12 && hh < 24){
+            if(mm >= 0 && mm <= 59){
+            printf("la hora es: %d:%d pm", hh - 12, mm);
+        }
+        else if(mm >= 60){
+            printf("la hora no tiene mas de 59 minutos");
+        }
+        else if(mm < 0){
+            printf("no pueden haber minutos negativos");
+        }
+        }
+        else if(hh > 24){
+            printf("no se pueden superar las 24 horas");
+        }
+}
