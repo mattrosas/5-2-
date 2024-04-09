@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a; 
+
+    printf("escribe un numero: ");
+      scanf("%d", &a);                        
+         printf("\n");
+
+    while(a != 1){
+        if(a % 2 == 0){
+            a = a / 2;
+            printf("%d\n", a);
+        }
+        else if(a % 2 != 0){
+            a = a * 3 + 1;
+            printf("%d\n", a);
+        }
+    }
+    return 0;
+}
