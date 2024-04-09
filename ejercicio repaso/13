@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a = 0;
+
+      printf("escribe un numero: ");
+      scanf("%d", &a);                        
+         printf("\n");
+      a = a * 0.85;
+        printf("debera pagar $%d", a);
+}
