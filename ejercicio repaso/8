@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a; 
+
+    printf("escribe un numero: ");
+      scanf("%d", &a);                        
+         printf("\n");
+
+    a = a * 1.02;
+    printf("en un mes ahorro $%d", a);
+}
