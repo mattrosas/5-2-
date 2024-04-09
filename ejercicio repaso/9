@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a = 50;
+    int b = 20;
+    int c = 0;
+
+while(a != (b * 2)){
+    b = b + 1;
+    a = a + 1;
+    c = c + 1;
+}
+printf(" en %d años", c);
+}
