@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a;
+    float b;
+
+     printf("escribe la plata que tenes: ");
+         scanf("%d", &a);
+         printf("\n");
+     printf("escribe la equivalencia a la moneda que queres: ");
+         scanf("%f", &b);
+         printf("\n");
+    
+     float c = a / b;
+     printf("la cantidad de dolares que tenes es: $%f", c);
+         
+}
