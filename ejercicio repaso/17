@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a;
+    float b;
+
+     printf("escribe tu edad: ");
+         scanf("%d", &a);
+         printf("\n");
+     printf("escribe tu peso: ");
+         scanf("%f", &b);
+         printf("\n");
+    
+     float peso = b * 0.01;
+     float c = ((210 - (0.5 * a)) - peso) + 4;
+     float d = (210 - (0.5 * a)) - peso;
+
+     printf("el tu FCM si sos hombre es %f\n", c);
+     printf("el tu FCM si sos mujer es %f\n", d);
+}
