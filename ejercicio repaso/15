@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a;
+    int b;
+
+     printf("escribe la cantidad de estudiantes hombres: ");
+         scanf("%d", &a);
+         printf("\n");
+     printf("escribe la cantidad de estudiantes mujeres: ");
+         scanf("%d", &b);
+         printf("\n");
+    
+     float c = (a * 100) / (a + b);
+     float d = (b * 100) / (a + b);
+     printf("el porcentaje de chicos es de %f\n", c);
+     printf("el porcentaje de chicas es de %f\n", d);
+         
+}
