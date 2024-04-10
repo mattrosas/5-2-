@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int a;
+
+     printf("escribe un numero: ");
+         scanf("%d", &a);
+         printf("\n");
+
+         if(a > 0){
+            printf("el valor absoluto: %d", a);
+         }
+         else if(a < 0){
+            printf("el valor absoluto es: %d", a * -1);
+         }
+         else if(a == 0){
+            printf("tu numero es 0 y no tiene un valor concreto");
+         }
+}
