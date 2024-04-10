@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+int main(){
+        int a;
+
+          printf("inserta el sueldo: ");
+         scanf("%d", &a);                        
+         printf("\n");
+         if(a <= 202){
+            printf("debera pagar $0 de impuesto");
+         }
+         else if(202 < a && a <= 607){
+            a = a * 0.05;
+            printf("debera pagar $%d de impuesto", a);
+         }
+         else if(607 < a && a <= 1013){
+            a = a * 0.10;
+            printf("debera pagar $%d de impuesto", a);
+         }
+         else if(1013 < a && a <= 1418){
+            a = a * 0.15;
+            printf("debera pagar $%d de impuesto", a);
+         }
+         else if(a > 1418){
+            a = a * 0.25;
+            printf("debera pagar $%d de impuesto", a);
+         }
+         
+}
