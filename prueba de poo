@@ -1,0 +1,165 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int s;
+
+    printf("elige uno de los 5 puntos: ");
+    scanf("%d", &s);
+    printf("\n");
+
+    switch(s){
+    case 1:
+    int a;
+    int b;
+    
+    printf("las uvas son tipo A o tipo B.Para elegir A presione 1 y para elegir B presione 2: ");
+    scanf("%d", &a);
+    printf("\n");
+    printf("su tamaño es 1 o 2: ");
+    scanf("%d", &b);
+    printf("\n");
+
+    if(a == 1){
+        if(b == 1){
+            printf("el kilo cuesta $200");
+        }
+        else if(b == 2){
+            printf("el kilo cuesta $300");
+        }
+    }
+    else if(a == 2){
+        if(b == 1){
+            printf("el kilo cuesta $300");
+        }
+        else if(b == 2){
+            printf("el kilo cuesta $500");
+        }
+    }
+    else{
+        printf("no es un tipo valido");
+    }
+    return 0;
+
+    case 2:
+    int base;
+    int p;
+    int i;
+    int r = 1;
+
+    printf("escribe tu numero base: ");
+    scanf("%d", &base);
+    printf("\n");
+    printf("escribe el exponente: ");
+    scanf("%d", &p);
+    printf("\n");
+
+    for(i = 1;i <= p; i++){
+        r *= base;
+    }
+    printf("el resultado es: %d", r);
+    return 0;
+ // pi = 3.141592
+    case 3:
+    int radio;
+    int area = 0;
+    int longitud = 0;
+    int volumen = 0;
+
+     printf("escribe el valor del radio: ");
+    scanf("%d", &radio);
+    printf("\n");
+
+    longitud = 2 * 3.141592 * radio;
+    area = 3.141592 * (radio * radio);
+    volumen = (4/3) * 3.141592 * (radio * radio * radio);
+
+     printf("la longitud es : %d\n", longitud);
+     printf("el area es : %d\n", area);
+     printf("el volumen es : %d\n", volumen);
+
+     return 0;
+
+     case 4:
+     int genero;
+     int edad;
+     int aporte;
+
+     printf("escribe tu genero. teniendo en cuenta que 1 es hombre y 2 es mujer: ");
+    scanf("%d", &genero);
+    printf("\n");
+    printf("escribe tu edad: ");
+    scanf("%d", &edad);
+    printf("\n");
+    printf("escribe tus años de aporte: ");
+    scanf("%d", &aporte);
+    printf("\n");
+
+    if(aporte >= 20){
+        if(genero == 1){
+            if(edad >= 65){
+                printf("se puede jubilar");
+            }
+            else{
+                printf("no se puede jubilar");
+            }
+        }
+        else if(genero == 2){
+            if(edad >= 60){
+                printf("se puede jubilar");
+            }
+            else{
+                printf("no se puede jubilar");
+            }
+        }
+        else{
+            printf("en genero solo puede elegir 1 o 2");
+        }
+    }
+    else{
+        printf("no se puede jubilar");
+    }
+
+    return 0;
+
+    case 5:
+    int hijos;
+    int edadh;
+    int j;
+    int adicionales = 0;
+    int reciben = 0;
+
+    printf("escribe la cantidad de hijos de la familia: ");
+    scanf("%d", &hijos);
+    printf("\n");
+
+    for(j = 0; j < hijos; j++){
+    printf("escribe la edad de uno de los hijos: ");
+    scanf("%d", &edadh);
+    printf("\n");
+    if(edadh >= 6 && edadh <= 18){
+        adicionales = adicionales + 1000;
+    }
+    }
+
+    if(hijos <= 2){
+        for(j = 0; j < hijos; j++){
+        reciben = reciben + 700;
+    }
+        printf("la familia recibira $%d y $%d adicionales por edad escolar", reciben, adicionales);
+    }
+    else if(hijos >= 3 && hijos <= 5){
+        for(j = 0; j < hijos; j++){
+        reciben = reciben + 800;
+    }
+        printf("la familia recibira $%d y $%d adicionales por edad escolar", reciben, adicionales);
+    }
+    else if(hijos > 5){
+        for(j = 0; j < hijos; j++){
+        reciben = reciben + 1200;
+    }
+        printf("la familia recibira $%d y $%d adicionales por edad escolar", reciben, adicionales);
+    }
+    return 0;
+    }
+}
