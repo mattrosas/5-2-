@@ -9,63 +9,66 @@ int main()
     int papel = 2;
     int tijera = 3;
     int jugador;
-    int computadora;
+    int computadora;        //se declaran las variables
     int rondasm = 0;
     int rondasj = 0;
     int partidasm = 0;
     int partidasj = 0;
-    
-    printf("elige piedra(1), papel(2) o tijeras(3)\n");
-    //for(rondas = 0; rondas < 5; rondas++)
-    while(rondasm < 3 && rondasj < 3){                  
-             while(partidasm < 2 && partidasj < 2){
-                  computadora = 1 + rand() % 3;
-                  printf("elige una opcion posible: ");
+
+
+    while(rondasm < 3 && rondasj < 3){      //se repite e while hasta que uno llegue a 3 rondas ganadas            
+             while(partidasm < 2 && partidasj < 2){//se repite el while hasta que uno gane 2 partidas
+                  computadora = 1 + rand() % 3;//la maquina elige aleatoriamente
+                   printf("elige piedra(1), papel(2) o tijeras(3)\n");
+                  printf("elige una opcion posible: ");//se le pide una opcion al jugador
                   scanf("%d", &jugador);
                   if(jugador == 1 && computadora == 3){
+                      printf("jugador gano la partida\n\n");//el jugador gana la partida y se le suma una partida
+                      partidasj = partidasj + 1;
+                  }
+                  else if(jugador == 2 && computadora == 1){//el jugador gana la partida y se le suma una partida
                       printf("jugador gano la partida\n\n");
                       partidasj = partidasj + 1;
                   }
-                  else if(jugador == 2 && computadora == 1){
+                  else if(jugador == 3 && computadora == 2){//el jugador gana la partida y se le suma una partida
                       printf("jugador gano la partida\n\n");
                       partidasj = partidasj + 1;
                   }
-                  else if(jugador == 3 && computadora == 2){
-                      printf("jugador gano la partida\n\n");
-                      partidasj = partidasj + 1;
-                  }
-                  else if(jugador == 3 && computadora == 1){
+                  else if(jugador == 3 && computadora == 1){//la maquina gana la partida y se le suma una partida
                       printf("la maquina gano la partida\n\n");
                       partidasm = partidasm + 1;
                   }
-                  else if(jugador == 1 && computadora == 2){
+                  else if(jugador == 1 && computadora == 2){//la maquina gana la partida y se le suma una partida
                       printf("la maquina gano la partida\n\n");
                       partidasm = partidasm + 1;
                   }
-                  else if(jugador == 2 && computadora == 3){
+                  else if(jugador == 2 && computadora == 3){//la maquina gana la partida y se le suma una partida
                       printf("la maquina gano la partida\n\n");
                       partidasm = partidasm + 1;
                   }
-                  else if(jugador == computadora){
+                  else if(jugador == computadora){//es empate y no se le suma nada a nadie
                       printf("la partida es empate\n\n");
                   }
+                  else{//se eligio un valor inexistente
+                    printf("elija una opcion valida\n\n");
+                  }
              }
-             if(partidasm == 2){
+             if(partidasm == 2){//al llegar a 2 partidas a la maquina se le suma una ronda y se les reinicia las partidas a ambos
                  rondasm = rondasm + 1;
                  partidasj = 0;
                  partidasm = 0;
                  printf("la maquina gano %d rondas\n\n", rondasm);
              }
-             else if(partidasj == 2){
+             else if(partidasj == 2){//al llegar a 2 partidas al jugador se le suma una ronda y se les reinicia las partidas a ambos
                  rondasj = rondasj + 1;
                  partidasj = 0;
                  partidasm = 0;
                  printf("el jugador gano %d ronda\n\n", rondasj);
              }
-             if(rondasm == 3){
+             if(rondasm == 3){//al llegar a 3 rondas se le da como ganador a la maquina
                  printf("el ganador es la maquina\n");
              }
-             else if(rondasj == 3){
+             else if(rondasj == 3){//al llegar a 3 rondas se le da como ganador al jugador
                  printf("el ganador es el jugador\n");
              }
     }
