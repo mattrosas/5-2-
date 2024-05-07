@@ -3,6 +3,13 @@
 #include <time.h>
 
 int main() {
+    int i;
+    int j;
+    char n;
+    char s;
+    char e;
+    char o;
+    char movimiento;
     int pc;
     int pf;
     int tc;
@@ -47,7 +54,26 @@ int main() {
     }
 
     while(a[tf][tc] == a[pf][pc]){
-        printf("a donde te quieres mover");
+        printf("a donde te quieres mover:n es de Norte, s es de Sur, e es de Este y o es de Oeste: ");
+        scanf("%c", &movimiento);
+        printf("\n");
+        if(movimiento == n){
+            pf = pf - 1;
+            printf("%c ", a[i][j]);
+        }
+        else if(movimiento == s){
+            pf = pf + 1;
+            printf("%c ", a[i][j]);
+        }
+        else if(movimiento == e){
+            pc = pc - 1;
+            printf("%c ", a[i][j]);
+        }
+        else if(movimiento == n){
+            pc = pc + 1;
+            printf("%c ", a[i][j]);
+        }
+         
     }
 
     return 0;
