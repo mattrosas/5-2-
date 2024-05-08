@@ -48,6 +48,10 @@ int main() {
                 a[pf][pc] = 'P';
                 a[tf][tc] = 'T';
                 }
+                if(a[pf][pc] == a[tf][tc]){
+                    puts("sos el ganador");
+                    return 0;
+                }
             }
             printf("%c ", a[i][j]);
         }
@@ -60,30 +64,62 @@ int main() {
         printf("\n");
         int pfn = pf;
         int pcn = pc;
+        if(pf == l - 2){
+                puts("perdiste");
+                return 0;
+            }
+        if(pf == 1){
+                puts("perdiste");
+                return 0;
+            }
+        if(pc == l - 2){
+                puts("perdiste");
+                return 0;
+            }
+        if(pc == 1){
+                puts("perdiste");
+                return 0;
+            }
 
         if(movimiento == 1){
             a[pf - 1][pc] = 'P';
             a[pfn][pcn] = 'x';
             pf = pfn - 1;
             pc = pcn;
+            if(a[pf][pc] == a[tf][tc]){
+                    puts("sos el ganador");
+                    return 0;
+            }
         }
         else if(movimiento == 2){
             a[pf + 1][pc] = 'P';
             a[pfn][pcn] = 'x';
             pf = pfn + 1;
             pc = pcn;
+            if(a[pf][pc] == a[tf][tc]){
+                    puts("sos el ganador");
+                    return 0;
+            }
         }
         else if(movimiento == 3){
             a[pf ][pc - 1] = 'P';
             a[pfn][pcn] = 'x';
             pf = pfn;
             pc = pcn - 1;
+            if(a[pf][pc] == a[tf][tc]){
+                    puts("sos el ganador");
+                    return 0;
+            }
         }
         else if(movimiento == 4){
             a[pf][pc] = 'P';
             a[pfn][pcn + 1] = 'x';
             pf = pfn;
             pc = pcn + 1;
+            if(a[pf][pc] == a[tf][tc]){
+                    puts("sos el 1 en 1 millon tenes mas suerte que kevin");
+                    return 0;
+            }
         }
          
              for (int i = 0; i < fila; i++) {
