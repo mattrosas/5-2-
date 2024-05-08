@@ -4,6 +4,7 @@
 
 int main() {
     int i;
+    int l;
     int j;
     char n;
     char s;
@@ -14,12 +15,11 @@ int main() {
     int pf;
     int tc;
     int tf;
-    int fila = 8, columna = 8;
- //   puts("Ingrese fila:");
- //   scanf("%d", &fila);
- //   puts("Ingrese columna:");
- //   scanf("%d", &columna);
+    puts("Ingrese el espacio de su tablero: ");
+    scanf("%d", &l);
+    
 
+    int fila = l, columna = l;
     //viendo si las dimensiones son positivas
     if (fila <= 0 || columna <= 0) {
         printf("Las dimensiones deben ser positivas.\n");
@@ -28,10 +28,10 @@ int main() {
 
     char a[fila][columna];
     srand(time(NULL));
-     pc=(rand()%6)+1;
-     pf=(rand()%6)+1;
-     tc=(rand()%6)+1;
-     tf=(rand()%6)+1;
+     pc=(rand()%(l - 2))+1;
+     pf=(rand()%(l - 2))+1;
+     tc=(rand()%(l - 2))+1;
+     tf=(rand()%(l - 2))+1;
     // int randomFila = (rand()% 6 ) +1;
     // int randomColumna = (rand() % 6)+ 1;
     // iniciar la matriz e imprimirla
@@ -75,6 +75,6 @@ int main() {
         }
          
     }
-
+    for
     return 0;
 }
