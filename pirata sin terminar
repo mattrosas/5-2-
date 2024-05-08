@@ -6,15 +6,16 @@ int main() {
     int i;
     int l;
     int j;
-    char n;
-    char s;
-    char e;
-    char o;
-    char movimiento;
+    int n;
+    int s;
+    int e;
+    int o;
+    int movimiento;
     int pc;
     int pf;
     int tc;
     int tf;
+    int intentos = 0;
     puts("Ingrese el espacio de su tablero: ");
     scanf("%d", &l);
     
@@ -34,15 +35,15 @@ int main() {
      tf=(rand()%(l - 2))+1;
     // int randomFila = (rand()% 6 ) +1;
     // int randomColumna = (rand() % 6)+ 1;
-    // iniciar la matriz e imprimirla
+    // iniciar la a e imprimirla
     for (int i = 0; i < fila; i++) {
         for (int j = 0; j < columna; j++) {
-            // asignar "o" a los bordes de la matriz
+            // asignar "o" a los bordes de la a
             if (i == 0 || i == fila - 1 || j == 0 || j == columna - 1) {
                 a[i][j] = 'o';
             } else{
 
-                a[i][j] = 'x';  // asignar 'o' al interior de la matriz
+                a[i][j] = 'x';  // asignar 'o' al interior de la a
                 if(pf != tf && pc != tc){
                 a[pf][pc] = 'P';
                 a[tf][tc] = 'T';
@@ -53,43 +54,46 @@ int main() {
         printf("\n");
     }
 
-    while(a[tf][tc] == a[pf][pc]){
-        printf("a donde te quieres mover:n es de Norte, s es de Sur, e es de Este y o es de Oeste: ");
-        scanf("%c", &movimiento);
+    while(intentos <= 50){
+        printf("a donde te quieres mover:1 es de Norte, 2 es de Sur, 3 es de Este y 4 es de Oeste: ");
+        scanf("%d", &movimiento);
         printf("\n");
-        if(movimiento == n){
-            pf = pf - 1;
-            printf("%c ", a[i][j]);
-            for (int i = 0; i < fila; i++) {
-        for (int j = 0; j < columna; j++) {// asignar "o" a los bordes de la matriz
-            if (i == 0 || i == fila - 1 || j == 0 || j == columna - 1) {
-                a[i][j] = 'o';
-            } else{
+        int pfn = pf;
+        int pcn = pc;
 
-                a[i][j] = 'x';  // asignar 'o' al interior de la matriz
-                if(pf != tf && pc != tc){
-                a[pf][pc] = 'P';
-                a[tf][tc] = 'T';
-                }
-            }
-            printf("%c ", a[i][j]);
+        if(movimiento == 1){
+            a[pf - 1][pc] = 'P';
+            a[pfn][pcn] = 'x';
+            pf = pfn - 1;
+            pc = pcn;
         }
-        printf("\n");
-    }
+        else if(movimiento == 2){
+            a[pf + 1][pc] = 'P';
+            a[pfn][pcn] = 'x';
+            pf = pfn + 1;
+            pc = pcn;
         }
-        else if(movimiento == s){
-            pf = pf + 1;
-            printf("%c ", a[i][j]);
+        else if(movimiento == 3){
+            a[pf ][pc - 1] = 'P';
+            a[pfn][pcn] = 'x';
+            pf = pfn;
+            pc = pcn - 1;
         }
-        else if(movimiento == e){
-            pc = pc - 1;
-            printf("%c ", a[i][j]);
-        }
-        else if(movimiento == n){
-            pc = pc + 1;
-            printf("%c ", a[i][j]);
+        else if(movimiento == 4){
+            a[pf][pc] = 'P';
+            a[pfn][pcn + 1] = 'x';
+            pf = pfn;
+            pc = pcn + 1;
         }
          
+             for (int i = 0; i < fila; i++) {
+        for (int j = 0; j < columna; j++) {
+            printf("%c ", a[i][j]);
+            }
+            printf("\n");
+        }
+        intentos++;
     }
     return 0;
+    
 }
