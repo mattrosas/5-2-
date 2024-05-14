@@ -48,15 +48,18 @@ int main() {
                 a[pf][pc] = 'P';
                 a[tf][tc] = 'T';
                 }
-                if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el ganador");
-                    return 0;
-                }
             }
+            a[0][l - 1] = '-';
+            a[l - 1][0] = '-';
             printf("%c ", a[i][j]);
         }
         printf("\n");
     }
+
+    if(a[pf][pc] == a[tf][tc]){
+                    puts("sos el ganador");
+                    return 0;
+                }
 
     while(intentos <= 50){
         printf("a donde te quieres mover:1 es de Norte, 2 es de Sur, 3 es de Este y 4 es de Oeste: ");
