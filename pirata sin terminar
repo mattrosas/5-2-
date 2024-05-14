@@ -55,7 +55,7 @@ int main() {
     }
 
     if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el ganador");
+                    puts("Encontraste el tesoro sin moverte¡Que suerte que tenes!");
                     return 0;
                 }
 
@@ -71,7 +71,7 @@ int main() {
             pf = pfn - 1;
             pc = pcn;
             if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el ganador");
+                    puts("Encontraste el tesoro");
                     return 0;
             }
         }
@@ -81,7 +81,7 @@ int main() {
             pf = pfn + 1;
             pc = pcn;
             if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el ganador");
+                    puts("Encontraste el tesoro");
                     return 0;
             }
         }
@@ -91,7 +91,7 @@ int main() {
             pf = pfn;
             pc = pcn - 1;
             if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el ganador");
+                    puts("Encontraste el tesoro");
                     return 0;
             }
         }
@@ -101,7 +101,7 @@ int main() {
             pf = pfn;
             pc = pcn + 1;
             if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el ganador");
+                    puts("Encontraste el tesoro");
                     return 0;
             }
         } 
