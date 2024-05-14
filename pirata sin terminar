@@ -33,8 +33,6 @@ int main() {
      pf=(rand()%(l - 2))+1;
      tc=(rand()%(l - 2))+1;
      tf=(rand()%(l - 2))+1;
-    // int randomFila = (rand()% 6 ) +1;
-    // int randomColumna = (rand() % 6)+ 1;
     // iniciar la a e imprimirla
     for (int i = 0; i < fila; i++) {
         for (int j = 0; j < columna; j++) {
@@ -49,8 +47,8 @@ int main() {
                 a[tf][tc] = 'x';
                 }
             }
-            a[0][l - 1] = '-';
-            a[l - 1][0] = '-';
+            // a[0][l - 1] = '-';
+            // a[l - 1][0] = '-';
             printf("%c ", a[i][j]);
         }
         printf("\n");
@@ -62,28 +60,11 @@ int main() {
                 }
 
     while(intentos <= 50){
-        printf("a donde te quieres mover:1 es de Norte, 2 es de Sur, 3 es de Este y 4 es de Oeste: ");
+        printf("a donde te quieres mover:\n 1 es de Norte, 2 es de Sur, 3 es de Este y 4 es de Oeste:\n");
         scanf("%d", &movimiento);
         printf("\n");
         int pfn = pf;
         int pcn = pc;
-        if(pf == l - 2){
-                puts("perdiste");
-                return 0;
-            }
-        if(pf == 1){
-                puts("perdiste");
-                return 0;
-            }
-        if(pc == l - 2){
-                puts("perdiste");
-                return 0;
-            }
-        if(pc == 1){
-                puts("perdiste");
-                return 0;
-            }
-
         if(movimiento == 1){
             a[pf - 1][pc] = 'P';
             a[pfn][pcn] = 'x';
@@ -115,21 +96,38 @@ int main() {
             }
         }
         else if(movimiento == 4){
-            a[pf][pc] = 'P';
-            a[pfn][pcn + 1] = 'x';
+            a[pf][pc + 1] = 'P';
+            a[pfn][pcn] = 'x';
             pf = pfn;
             pc = pcn + 1;
             if(a[pf][pc] == a[tf][tc]){
-                    puts("sos el 1 en 1 millon tenes mas suerte que kevin");
+                    puts("sos el ganador");
                     return 0;
             }
-        }
-         
+        } 
              for (int i = 0; i < fila; i++) {
         for (int j = 0; j < columna; j++) {
             printf("%c ", a[i][j]);
             }
             printf("\n");
+            
+            if(pf == l - 1){
+                puts("agua");
+                return 0;
+            }
+        if(pf == 0){
+                puts("agua");
+                return 0;
+            }
+        if(pc == l - 1){
+                puts("agua");
+                return 0;
+            }
+        if(pc == 0){
+                puts("agua");
+                return 0;
+            }
+
         }
         intentos++;
     }
