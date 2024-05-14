@@ -46,7 +46,7 @@ int main() {
                 a[i][j] = 'x';  // asignar 'o' al interior de la a
                 if(pf != tf && pc != tc){
                 a[pf][pc] = 'P';
-                a[tf][tc] = 'T';
+                a[tf][tc] = 'x';
                 }
             }
             a[0][l - 1] = '-';
