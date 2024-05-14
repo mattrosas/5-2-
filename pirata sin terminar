@@ -23,7 +23,7 @@ int main() {
     int fila = l, columna = l;
     //viendo si las dimensiones son positivas
     if (fila <= 0 || columna <= 0) {
-        printf("Las dimensiones deben ser positivas.\n");
+        printf("Las dimensiones deben ser siempre numeros y positivas.\nEl juego se termina por querer romperlo\nPdt:esto es para eduardo");
         return 1;
     }
 
@@ -105,12 +105,19 @@ int main() {
                     return 0;
             }
         } 
+        else if(movimiento <= 0) {
+        printf("El movimiento debe ser siempre el indicado anteriormente.\nEl juego se termina por querer romperl, juega normal");
+        return 0;
+    }
+    else if(movimiento >= 5){
+        printf("el numero debe ser el indicado");
+    }
              for (int i = 0; i < fila; i++) {
         for (int j = 0; j < columna; j++) {
             printf("%c ", a[i][j]);
             }
             printf("\n");
-            
+
             if(pf == l - 1){
                 puts("agua");
                 return 0;
