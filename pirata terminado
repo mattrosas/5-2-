@@ -31,8 +31,8 @@ void crearMatriz(char a[][20], int fila, int columna, int *pf, int *pc, int *tf,
         y el otro para un espacio aleatorio donde se encuentre el tesoro como 'T'(Ahora esta oculta) */
     a[*pf][*pc] = 'P';
     a[*tf][*tc] = '_';
-    a[0][columna - 1] = '-';
-    a[fila - 1][0] = '-';
+    a[0][columna - 1] = '=';
+    a[fila - 1][0] = '=';
 }
 
 void imprimirMatriz(char a[][20], int fila, int columna) {
