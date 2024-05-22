@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n1, n2, n3, n4;
+
+    printf("Ingrese 4 numeros:\n");
+    scanf("%d %d %d %d", &n1, &n2, &n3, &n4);
+    int suma = (n1 + n2 + n3 + n4);
+    printf("la suma de tus numeros es esta: %d.\n", suma);
+    int media = suma / 4;
+    printf("La media de tus numeros es: %d.\n", media);
+    printf("Tus numeros eran: %d, %d, %d, %d.\n", n1, n2, n3, n4);
+    return 0;
+}
