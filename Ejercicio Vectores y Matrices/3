@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n;
+    char a[13];
+    printf("Ingrese el mes:\n");
+    scanf("%d", &n);
+   char a[13] = {"no es un mes", "enero tiene 31 dias", "febrero tiene 28 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias", "enero tiene 31 dias"}
+    return 0;
+}
