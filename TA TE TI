@@ -63,8 +63,21 @@ int main() {
         imprimirTablero();
 
         // Pedir al jugador que ingrese su movimiento
-        printf("Turno del jugador %c. Ingrese fila y columna (ejemplo: 1 2): ", jugador);
+        printf("Turno del jugador %c. Ingrese fila y columna (ejemplo: 1 2). Recorda que comienza en 0: ", jugador);
         scanf("%d %d", &fila, &columna);
+
+        if(fila < 0){
+            puts("El valor es invalido\n");
+        }
+        else if(fila >= 3){
+            puts("El valor es invalido\n");
+        }
+        if(columna < 0){
+            puts("El valor es invalido\n");
+        }
+        if(columna >= 4){
+            puts("El valor es invalido\n");
+        }
 
         // Verificar si la casilla está vacía
         if (tablero[fila][columna] == ' ') {
