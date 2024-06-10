@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main() {
+    srand(time(NULL));
+
+    int bala;
+    int cpu;
+    int jugador;
+    int cpuv = 3;
+    int jugadorv = 3;
+         
+         puts("Comienza el juego");
+    while(jugadorv != 0 && cpuv != 0){
+    puts("¿Quieres dispararle al rival(1) o a ti mismo(2)?");
+    scanf("%d", &jugador);
+    bala = rand() % 2;
+
+    if(jugador == 1){
+        puts("Le disparaste al rival");
+        if(bala == 1){
+            puts("La bala es verdadera, el rival pierde una vida");
+            cpuv = cpuv - 1;
+        }
+        else if(bala == 0){
+            puts("La bala es falsa");
+        }
+    }
+    else if(jugador == 2){
+        puts("Te disparaste a ti mismo");
+        if(bala == 1){
+            puts("La bala es verdadera, pierdes una vida");
+            jugadorv = jugadorv - 1;
+        }
+        else if(bala == 0){
+            puts("La bala es falsa");
+        }
+    }
+   if(cpuv == 0){
+    puts("El rival murio ¡Felicidades has sobrevivido!");
+    return 0;
+   }
+   else if(jugadorv == 0){
+    puts("Moriste murio ¡Que mala suerte, has muerto!");
+    return 0;
+   }
+    }
+    return 0;
+}
