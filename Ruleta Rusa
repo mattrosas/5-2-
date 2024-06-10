@@ -5,7 +5,7 @@
     void juego(int bala, int cpu, int cpuv, int jugador, int jugadorv){
     while(1){
         if(cpuv == 0){
-        puts("El rival murio ¡Felicidades has sobrevivido!");
+        puts("El rival murio ¡has sobrevivido!");
         break;
     }
     else if(jugadorv == 0){
@@ -67,7 +67,7 @@
             }
         }
         if(cpuv == 0){
-        puts("El rival murio ¡Felicidades has sobrevivido!");
+        puts("El rival murio ¡has sobrevivido!");
         break;
     }
     else if(jugadorv == 0){
