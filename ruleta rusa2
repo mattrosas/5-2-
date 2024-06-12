@@ -1,0 +1,171 @@
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <time.h>
+    #include <unistd.h>
+    #include "libreria.h"
+    #define YELLOW  "\033[1;33m"
+    #define RED     "\033[1;31m"
+    #define BLUE    "\033[1;34m"
+    #define RESET   "\033[0m"
+    #define GREEN   "\033[1;32m"
+    #define MAGENTA "\033[1;35m"
+    #define CYAN    "\033[1;36m"
+    #define WHITE   "\033[1;37m"
+
+void objetos(objeto, objeto2, daño){
+    printf(CYAN"¿Quieres usar algun objeto?si(1), no(2)\n"RESET);
+    scanf("%d", &objeto);
+    if(objeto == 1){
+        printf(CYAN"¿Que objeto quieres usar?\n"RESET);
+        printf(CYAN"1.navaja\n"RESET);
+        printf(CYAN"2.esposas\n"RESET);
+        printf(CYAN"3.lupa\n"RESET);
+        printf(CYAN"4.jugo\n"RESET);
+        printf(CYAN"5.lata\n"RESET);
+        scanf("%d", &objeto2);
+        if(objeto2 == 1){
+            printf(GREEN"Has usado la navaja\n"RESET);
+            daño = daño * 2;
+        } 
+        else if (objeto2 == ){
+            
+        }
+    }
+}
+
+    void juego(daño, bala, cpu, cpuv, jugador, jugadorv){
+        while(1){
+            if(cpuv == 0){
+                printf(MAGENTA"El rival murio ¡has sobrevivido!\n"RESET);
+            break;
+        }
+        else if(jugadorv == 0){
+            printf(MAGENTA"has perdido\n"RESET);
+            break;
+        }
+            printf(MAGENTA"¿Quieres dispararle al rival(1) o a ti mismo(2)?\n"RESET);
+            scanf("%d", &jugador);
+            bala = rand() % 2;
+
+            if(jugador == 1){
+                puts("Le disparaste al rival");
+                if(bala == 1){
+                    puts("La bala es verdadera, el rival pierde una vida");
+                    cpuv = cpuv - daño;
+                    daño = 1;
+                }
+                else if(bala == 0){
+                    puts("La bala es falsa");
+                    daño = 1;
+                }
+            }
+            else if(jugador == 2){
+                puts("Te disparaste a ti mismo");
+                if(bala == 1){
+                    puts("La bala es verdadera, pierdes una vida");
+                    jugadorv = jugadorv - daño;
+                    daño = 1;
+                    juego(bala, cpu, cpuv, jugador, jugadorv, daño);
+                }
+                else if(bala == 0){
+                    puts("La bala es falsa");
+                    daño = 1;
+                    juego(bala, cpu, cpuv, jugador, jugadorv, daño);
+                }
+            }
+
+            puts("Esperando a tu rival...");
+            puts(".");
+            puts(".");
+            puts(".");
+
+            cpu = rand() % 5;
+            if(jugador == 0){
+                puts("Tu rival se ha disparodo a si mismo");
+                if(bala == 1){
+                    puts("La bala es verdadera, tu rival pierde una vida");
+                    jugadorv = jugadorv - daño;
+                    daño = 1;
+                }
+                else if(bala == 0){
+                    puts("La bala es falsa");
+                    daño = 1;
+                }
+        }else{
+                puts("Tu rival te disparo");
+                if(bala == 1){
+                    puts("La bala es verdadera, pierdes una vida");
+                    jugadorv = jugadorv - daño;
+                    daño = 1;  
+                }
+                else if(bala == 0){
+                    puts("La bala es falsa");
+                    daño = 1;
+                }
+            }
+            if(cpuv == 0){
+            printf(MAGENTA"El rival ha muerto ¡has sobrevivido!\n"RESET);
+            break;
+        }
+        else if(jugadorv == 0){
+            printf(MAGENTA"Has muerto\n"RESET);
+            break;
+        }
+        }
+        }
+    
+    void mostrarMenu(menu, bala, cpu, cpuv, jugador, jugadorv) {
+        int menu;
+    printf(RED"┌──────────────┐\n"RESET);
+    printf(RED"│Menú Principal|\n"RESET);
+    printf(RED"│ 1. Jugar     │\n"RESET);
+    printf(RED"│ 2. Reglas    │\n"RESET);
+    printf(RED"│ 3. Objetos   │\n"RESET);
+    printf(RED"│ 4. Historia  │\n"RESET);
+    printf(RED"│ 5.Como jugar │\n"RESET);
+    printf(RED"└──────────────┘\n"RESET);
+        printf(CYAN"Ingrese una opcion\n"RESET);
+        scanf("%d", &menu);
+
+        if(menu == 2){
+            printf(BLUE"⦁ Será un juego por turnos (uno para el jugador y otro para el bot).\n"RESET);
+            printf(BLUE"⦁ Se contará con un revólver de 8 balas de capacidad.\n"RESET);
+            printf(BLUE"⦁ Habrá un total de 8 objetos con efectos distintos (puede aumentar o disminuir el número de\n"RESET);                             printf(BLUE"objetos a medida que el proyecto avance)\n"RESET);
+            printf(BLUE"⦁ Se repartirán objetos al jugador y al bot (1 a 4)\n"RESET);
+            printf(BLUE"⦁ Tanto el jugador como el ot contarán con 3 vidas(Que pueden aumentar con el uso de objetos).\n"RESET);
+            printf(BLUE"⦁ Si el jugador o el bot pierden todas sus vidas se declarara el final de la partida"RESET);
+        }
+            if(menu == 3){
+                printf(BLUE"⦁ Navaja: Al disparar haces uno mas de daño(si la bala es verdadera)\n"RESET);
+                printf(BLUE"⦁ Esposas: El rival pierde un turno.\n"RESET);
+                printf(BLUE"⦁Lupa:Puedes ver si la siguiente bala es verdadera o falsa.\n"RESET);
+                printf(BLUE"⦁Jugo:Te sumas una vida.\n"RESET);
+                printf(BLUE"⦁Lata:sacas la siguiente bala de la escopeta.\n"RESET);
+            }
+        else if(menu == 1){
+            juego(bala, cpu, cpuv, jugador, jugadorv);
+        }
+}
+
+    int main() {
+        srand(time(NULL));
+
+        int bala;
+        int cpu;
+        int jugador;
+        int cpuv = 3;
+        int jugadorv = 3;
+        int menu;
+        int navaja;
+        int esposas;
+        int lupa;
+        int Jugo;
+        int lata;
+        int objeto;
+        int xd;
+        int objeto2;
+
+        mostrarMenu(menu, bala, cpu, cpuv, jugador, jugadorv);
+        return 0;
+    }
