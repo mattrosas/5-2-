@@ -1,0 +1,48 @@
+package elperromax;
+import java.util.Scanner;
+
+public class perromaxel {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean continuar = true;
+      
+        while(continuar) {
+    	  System.out.println("Ingrese el primer número:");
+          double num1 = scanner.nextDouble();
+
+          System.out.println("Ingrese el segundo número:");
+          double num2 = scanner.nextDouble();
+        
+          double resultado = 0;
+          double resultado1 = 0;
+          double resultado2 = 0;
+          double resultado3 = 0;
+          double resultado4 = 0;
+          
+              resultado = num1 + num2;
+              resultado1 = num1 - num2;
+              resultado2 = num1 * num2;
+              
+               if(num1 == 0) {
+                  System.out.println("Error: División por cero no permitida.");
+              }
+               else if(num2 == 0) {
+            	   System.out.println("Error: División por cero no permitida.");
+               }else {
+            	   resultado3 = num1 / num2;
+            	   resultado4 = num1 % num2;
+               }
+         
+              System.out.printf("El resultado de %.2f %.2f es %.2f%n %.2f%n %.2f%n %.2f%n %.2f%n", num1, num2, resultado, resultado1, resultado2, resultado3, resultado4);
+     
+          System.out.println("¿Desea realizar otra operación? (sí/no):");
+          String respuesta = scanner.next();
+          if (respuesta.equalsIgnoreCase("no")) {
+              continuar = false;
+          }
+          scanner.close();
+          System.out.println("Gracias por usar la calculadora.");
+        }
+    }
+}
