@@ -1,0 +1,26 @@
+package elperromax;
+import java.util.Scanner;
+
+public class perromaxel {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean continuar = true;
+        
+    	  System.out.println("Ingrese el primer número:");
+          double num1 = scanner.nextDouble();
+
+          System.out.println("Ingrese el segundo número:");
+          double num2 = scanner.nextDouble();
+          
+          if(num1 > num2) {
+        	  System.out.printf("%.2f es el mayor", num1);
+          }
+          else if(num2 > num1) {
+        	  System.out.printf("%.2f es el mayor", num2);
+          }
+          else if(num2 == num1) {
+        	  System.out.printf("%.2f es igual a %.2f", num1, num2);
+          }
+    }
+}
