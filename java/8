@@ -1,0 +1,21 @@
+package matias;
+import java.util.Scanner;
+
+public class matias {
+
+	public static void main(String[] args) {
+		  Scanner scanner = new Scanner(System.in);
+		 
+		
+		  System.out.print("Introduce un caracter: ");
+		  String nombre = scanner.nextLine();
+	     
+	        if (nombre.length() == 1) {
+	            char caracter = nombre.charAt(0);
+	            int codigoAscii = (int) caracter;
+	            System.out.println("El caracter '" + caracter + "' tiene el c0digo ASCII: " + codigoAscii);
+	        } else {
+	            System.out.println("Debes introducir exactamente un caracter.");
+	        }
+	}
+}
