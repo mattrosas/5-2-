@@ -1,0 +1,17 @@
+package matias;
+import java.util.Scanner;
+
+public class matias {
+
+	public static void main(String[] args) {
+		  Scanner scanner = new Scanner(System.in);
+		 
+		
+		System.out.println("Ingrese un numero:");
+        int nombre = scanner.nextInt();
+        
+        char caracter = (char) nombre;
+        
+        System.out.println("El numero "+nombre+" es el caracter "+ caracter);
+	}
+}
