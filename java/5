@@ -1,0 +1,18 @@
+package matias;
+import java.util.Scanner;
+
+public class matias {
+
+	public static void main(String[] args) {
+		  Scanner scanner = new Scanner(System.in);
+		 
+		
+		System.out.println("Ingrese tu radio:");
+        double nombre = scanner.nextDouble();
+        
+        double area = Math.PI*(nombre * nombre);
+        
+		System.out.println("Tu area es de "+area);
+	}
+}
+
