@@ -1,0 +1,19 @@
+package matias;
+import java.util.Scanner;
+
+public class matias {
+
+	public static void main(String[] args) {
+		  Scanner scanner = new Scanner(System.in);
+		 
+		
+		System.out.println("Ingrese un numero:");
+        double nombre = scanner.nextDouble();
+        
+        if(nombre % 2 == 0) {
+        	System.out.println("Tu numero es par");
+        }else{
+        	System.out.println("Tu numero es impar");
+        }
+	}
+}
