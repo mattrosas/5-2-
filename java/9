@@ -1,0 +1,16 @@
+package matias;
+import java.util.Scanner;
+
+public class matias {
+
+	public static void main(String[] args) {
+		  Scanner scanner = new Scanner(System.in);
+		 
+		
+		  System.out.print("Introduce lo que vale el producto: ");
+		  double precio = scanner.nextDouble();
+	     
+	       double total = 1.21 * precio;
+	       System.out.print("El precio total es de "+ total);
+	}
+}
