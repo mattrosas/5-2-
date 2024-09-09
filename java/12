@@ -1,0 +1,22 @@
+package rosas;
+
+public class rosas {
+
+	public static void main(String[] args) {
+	System.out.println("Hola");		 
+		int numero = 0;
+		int i = 0;
+		
+		while(i != 100) {
+			i = i + 1;
+		      numero = numero + 1;
+		      if(numero % 2 == 0) {
+		    	  if(numero % 3 == 0) {
+		      System.out.print(numero+"\n");
+		    	  }
+		      }
+		}
+		}
+	}
+
+
