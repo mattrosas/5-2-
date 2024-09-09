@@ -1,0 +1,25 @@
+package rosas;
+import java.util.Scanner;
+
+public class rosas {
+
+	public static void main(String[] args) {
+		 Scanner scanner = new Scanner(System.in);
+		 
+		int numero = 0;
+		int i = 0;
+		double ventaTotal = 0;
+		
+		System.out.println("Ingrese el numero de ventas: ");
+        int nventas = scanner.nextInt();
+		
+		while(i != nventas) {
+			i = i + 1;
+			System.out.println("Ingrese la venta: ");
+	        double venta = scanner.nextDouble();
+	        
+	        ventaTotal = ventaTotal + venta;
+		}
+		System.out.println("La suma de las ventas es de: " + ventaTotal);
+		}
+	}
