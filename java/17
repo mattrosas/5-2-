@@ -1,0 +1,37 @@
+package rosas;
+import java.util.Scanner;
+
+public class rosas {
+
+    public static void main(String[] args) {
+    	Scanner sc = new Scanner(System.in);
+        
+    	int intentos = 0;
+    	System.out.println("Introduce un dia de la semana, de manera numerica.\n 1 es el lunes y 7 es el sabado");
+    	int numsemana=sc.nextInt();
+    	
+        switch(numsemana) {
+        case 1:
+        	System.out.println("Elegiste el dia lunes");
+        	break;
+        case 2:
+        	System.out.println("Elegiste el dia martes");
+        	break;
+        case 3:
+        	System.out.println("Elegiste el dia miercoles");
+        	break;
+        case 4:
+        	System.out.println("Elegiste el dia jueves");
+        	break;
+        case 5:
+        	System.out.println("Elegiste el dia viernes");
+        	break;
+        case 6:
+        	System.out.println("Elegiste el dia sabado");
+        	break;
+        case 7:
+        	System.out.println("Elegiste el dia domingo");
+        	break;
+        }
+    }
+}
