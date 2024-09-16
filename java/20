@@ -1,0 +1,27 @@
+package rosas;
+import java.util.Scanner;
+
+public class rosas {
+
+	 public static void main(String[] args) {
+		    Scanner sc = new Scanner(System.in);
+	        
+	        System.out.println("Introduce un numero");
+	    	int num=sc.nextInt();
+	    	int veri = 0;
+	    	int a = 0;
+	        for(int i = 1; i < num; i++) {
+	        	 a = a + 1;
+	        	 if(a > 1 || a > num) {
+	        	     if(num % a == 0) {
+	        	    	veri = veri + 1;
+	        	     }
+	        	 }
+	        	}
+	        if(veri >= 1) {
+	        	 System.out.println("Tu numero no es primo");
+	        }else {
+	        	 System.out.println("Tu numero es primo");
+	        }
+	}
+}
