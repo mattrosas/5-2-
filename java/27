@@ -1,0 +1,21 @@
+package rosas;
+import java.util.Scanner;
+
+public class rosas {
+    public static void main(String[] args) {
+         Scanner sn=new Scanner(System.in);
+    	 
+         int num = 0;
+         int contador = 0;
+         
+    	while(num != -1) {
+         System.out.println("Ingrese un numero:");
+          num = sn.nextInt();
+          
+          if(num != -1) {
+        	  contador++;
+          }
+    	}
+    	System.out.println("ingresaste "+ contador + "numeros");
+    }
+}
