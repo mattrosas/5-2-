@@ -1,0 +1,12 @@
+package rosas;
+import java.util.Scanner;
+
+public class rosas {
+    public static void main(String[] args) {
+    	  Scanner scanner = new Scanner(System.in);
+    	  System.out.println("Ingrese una frase:");
+          String cadena = scanner.nextLine();
+ 
+          System.out.print(cadena.replace('a', 'e'));
+    }
+}
