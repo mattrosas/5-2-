@@ -1,0 +1,16 @@
+package rosas;
+import java.util.Scanner;
+
+public class rosas {
+	 public static void main(String[] args) {
+	        
+		 Scanner scanner = new Scanner(System.in);
+		 
+		    System.out.println("Ingrese un texto:");
+	        String texto = scanner.nextLine();
+	        
+	        String sub = texto.substring(3, 5);
+	        
+	        System.out.println(sub);
+	    }
+}
